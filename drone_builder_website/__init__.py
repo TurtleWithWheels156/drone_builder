@@ -1,12 +1,13 @@
 from flask import Flask
-from drone_builder_website.views import products
-
 app = Flask(__name__)
 
 
 #blueprin
-app.register_blueprint(products.mod)
+from drone_builder_website.views import products
+from drone_builder_website.views import build_form
 
+app.register_blueprint(products.mod)
+app.register_blueprint(build_form.mod)
 
 @app.route('/')
 def hello_world():
