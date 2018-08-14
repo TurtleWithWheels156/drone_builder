@@ -6,3 +6,4 @@ mod = Blueprint('products', __name__, url_prefix='/products')
 def index():
     return render_template('products/index.html')
 
+#will add route to fetch products
